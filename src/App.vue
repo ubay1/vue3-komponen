@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import AlertError from "./components/alert/Error.vue";
 import AlertInfo from "./components/alert/Info.vue";
 import AlertWarning from "./components/alert/Warning.vue";
+import Modal from "./components/modal/Modal.vue";
+
+const isOpenDialog = ref<boolean>(false);
 </script>
 
 <template>
@@ -12,6 +16,13 @@ import AlertWarning from "./components/alert/Warning.vue";
         <AlertError message="Alert error" />
         <AlertInfo message="Alert info" />
         <AlertWarning message="Alert warning" />
+      </div>
+      <div>
+        <div class="font-bold text-xl">Dialog</div>
+        <button @click="isOpenDialog = true">Open dialog</button>
+        <Teleport to="body">
+          <Modal v-if="isOpenDialog" title="Test Dialog" @close="isOpenDialog = false"> ini dialog modal </Modal>
+        </Teleport>
       </div>
     </div>
   </div>
