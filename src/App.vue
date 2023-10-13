@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Error from "./components/alert/Error.vue";
+import AlertError from "./components/alert/Error.vue";
+import AlertInfo from "./components/alert/Info.vue";
 </script>
 
 <template>
@@ -7,7 +8,8 @@ import Error from "./components/alert/Error.vue";
     <div class="grid grid-cols-2">
       <div class="">
         <div class="font-bold text-xl">Alert</div>
-        <Error message="Alert error" />
+        <AlertError message="Alert error" />
+        <AlertInfo message="Alert info" />
       </div>
     </div>
   </div>
