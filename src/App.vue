@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AlertError from "./components/alert/Error.vue";
 import AlertInfo from "./components/alert/Info.vue";
+import AlertWarning from "./components/alert/Warning.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import AlertInfo from "./components/alert/Info.vue";
         <div class="font-bold text-xl">Alert</div>
         <AlertError message="Alert error" />
         <AlertInfo message="Alert info" />
+        <AlertWarning message="Alert warning" />
       </div>
     </div>
   </div>
